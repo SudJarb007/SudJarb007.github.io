@@ -7,109 +7,179 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
         @theme {
-        --color-clifford: #da373d;
+            --color-primary-dark: #111222;
+            --color-accent-red: #8C1D28;
+            --e-global-color-4afe6df: #7F1B27;
+            --color-accent-teal: #0F6B65;
+            --color-light-yellow: #F2E394;
+            --color-gold: #FFB800;
+            --e-global-color-98c9d58: #240046;
+            --e-global-color-88f316f: #ED4A3B;
+            --e-global-color-daf8b8d: #2D7279;
+            --e-global-color-5b37f248: #000;
+            --e-global-color-19cccbc3: #FFF;
       }
     </style>
 </head>
 
 <body>
-        <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
-        <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
-        <nav class="relative bg-gray-800">
-            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-                <div class="relative flex h-16 items-center justify-between">
-                    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                        <!-- Mobile menu button-->
-                        <button type="button" command="--toggle" commandfor="mobile-menu"
-                            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
-                            <span class="absolute -inset-0.5"></span>
-                            <span class="sr-only">Open main menu</span>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                                data-slot="icon" aria-hidden="true" class="size-6 in-aria-expanded:hidden">
-                                <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                                data-slot="icon" aria-hidden="true" class="size-6 not-in-aria-expanded:hidden">
-                                <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                        <div class="flex shrink-0 items-center">
-                            <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-                                alt="Your Company" class="h-8 w-auto" />
-                        </div>
-                        <div class="hidden sm:ml-6 sm:block">
-                            <div class="flex space-x-4">
-                                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
-                                <a href="#" aria-current="page"
-                                    class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white">Dashboard</a>
-                                <a href="#"
-                                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Team</a>
-                                <a href="#"
-                                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Projects</a>
-                                <a href="#"
-                                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Calendar</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                        <button type="button"
-                            class="relative rounded-full p-1 text-gray-400 focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500">
-                            <span class="absolute -inset-1.5"></span>
-                            <span class="sr-only">View notifications</span>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                                data-slot="icon" aria-hidden="true" class="size-6">
-                                <path
-                                    d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </button>
+    <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
 
-                        <!-- Profile dropdown -->
-                        <el-dropdown class="relative ml-3">
-                            <button
-                                class="relative flex rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
-                                <span class="absolute -inset-1.5"></span>
-                                <span class="sr-only">Open user menu</span>
-                                <img src="https://i.pinimg.com/1200x/c8/ae/18/c8ae18020dae9c666f780ae8179e0a5b.jpg"
-                                    alt=""
-                                    class="size-8 rounded-full bg-gray-800 outline -outline-offset-1 outline-white/10" />
-                            </button>
+    <nav class = "nav_box 
+        top-0
+        w-full
+        flex justify-between
+        p-6 z-50 font-bold">
+        <div id="nav-left" class="text-xl">SUDJARB007</div>
+        <div id="nav-right" class="text-x-4">
+            <a href="/">HOME</a> |
+            <a href="/pages/aboutme.html">ABOUT ME</a> |
+            <a href="/pages/contract.html">MY PROJECT</a> |
+            <a href="/">CONTACT</a>
+        </div>
+    </nav>
 
-                            <el-menu anchor="bottom end" popover
-                                class="w-48 origin-top-right rounded-md bg-white py-1 shadow-lg outline outline-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
-                                <a href="#"
-                                    class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:outline-hidden">Your
-                                    profile</a>
-                                <a href="#"
-                                    class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:outline-hidden">Settings</a>
-                                <a href="#"
-                                    class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:outline-hidden">Sign
-                                    out</a>
-                            </el-menu>
-                        </el-dropdown>
-                    </div>
+    <div class = "contain_home
+        bg-[#222831]
+        h-screen
+        w-full
+        p-4">
+        <div class = "contain2_home 
+            bg-[#F2E394]
+            h-full
+            w-full
+            flex flex-col items-center 
+            justify-center text-center 
+            rounded-sm">
+            <div class = "contain3_home_text mb-8">
+                <h1 class ="
+                    text-5xl
+                    md:text-7xl
+                    font-bold
+                    text-[#111222] 
+                    mb-2">
+                Hey! I'm</h1>
+                <h1 class ="
+                    text-x
+                    md:text-7xl
+                    font-bold
+                    text-[#111222]
+                    mb-2">
+                Prapassorn Nouvapeth</h1>
+                <h3 class="
+                    text-3xl
+                    font-medium
+                    text-[#111222]
+                    mt-4">A computer science student at kmitl</h3>
+            </div>
+
+            <div class = "contain4_home_pic
+            relative 
+            w-64 
+            h-80
+            md:w-80
+            md:h-[450px]">
+                <img class="picture"
+                 src="https://i.pinimg.com/1200x/c8/ae/18/c8ae18020dae9c666f780ae8179e0a5b.jpg"
+                 alt="none"/>
+            </div>
+        </div>
+    </div>  
+    
+    <div class="flex h-screen w-full">
+        <div class="flex-1 bg-[#7F1B27] flex items-center justify-end pr-10">
+            <h2 class="text-white text-9xl font-bold">ABOUT ME</h2>
+        </div>
+
+        <div class="flex-1 bg-[#111222] flex items-center justify-start pl-10">
+            <h2 class="text-white text-9xl font-bold">PROGRA</h2>
+        </div>
+    </div>
+
+    <div class="contain-info-profile items-start mt-20 mb-24 mx-10 m-h-52 md:flex-row md:justify-between">
+        <div class="contain-info">
+            <div>
+                <h4 class="font-extrabold text-yellow-400 text-5xl">Prapassorn</h4>
+                <h4 class="font-extrabold text-sky-400 text-5xl">Nouvapeth</h4>
+                <p class="text-xl font-bold"><span class="text-gray-500">CS student at KMITL.</span></p>
+            </div>
+        </div>
+    </div>
+
+    <footer style="
+            width: 100%;
+            position: fixed;
+            bottom: 0px;
+            background-color: #222831;">
+        <div
+            class="container mx-auto my-16 text-gray-400 font-medium flex flex-col items-center gap-y-10 sm:flex-row sm:items-start sm:justify-around">
+            <div>
+                <h2 class="text-4xl font-extrabold text-white">Contact Info</h2>
+                <!-- <h4 class="text-gray-400 text-2xl font-extrabold mt-4">Contact Info</h4> -->
+                <p class="font-semibold text-gray-400 mt-2 leading-relaxed" Prapassornnou@gmail.com<br>
+                    Nakhonratchasima 30000, Thailand<br>
+                    0931596415
+                </p>
+            </div>
+
+            <div>
+                <h5 class="text-xl font-bold text-white">Links</h5>
+                <div class="flex flex-col mt-4 gap-2">
+                    <a aria-label="link-home" href="#" class="hover:text-sky-700 hover:cursor-pointer">Home</a>
+                    <a aria-label="link-aboutme" href="#aboutme" class="hover:text-sky-700 hover:cursor-pointer">About
+                        me</a>
+                    <a aria-label="link-education" href="#education"
+                        class="hover:text-sky-700 hover:cursor-pointer">Project</a>
+                    <a aria-label="link-works" href="#works" class="hover:text-sky-700 hover:cursor-pointer">Works</a>
+                    <a aria-label="link-expertise" href="#expertise"
+                        class="hover:text-sky-700 hover:cursor-pointer">Contact</a>
+                    <!-- <a aria-label="link-certified" href="#certified" class="hover:text-sky-700 hover:cursor-pointer">Certified</a> -->
+                    <!-- <a aria-label="link-activities" href="#activities" class="hover:text-sky-700 hover:cursor-pointer">Activities</a> -->
                 </div>
             </div>
 
-            <el-disclosure id="mobile-menu" hidden class="block sm:hidden">
-                <div class="space-y-1 px-2 pt-2 pb-3">
-                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
-                    <a href="#" aria-current="page"
-                        class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white">Home</a>
-                    <a href="#"
-                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">About</a>
-                    <a href="#"
-                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Project</a>
-                    <a href="#"
-                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Contract</a>
+            <div>
+                <h5 class="text-xl font-bold text-white">Links</h5>
+                <div class="flex flex-col mt-4 gap-2">
+                    <a aria-label="link-home" href="#" class="hover:text-sky-700 hover:cursor-pointer">Home</a>
+                    <a aria-label="link-aboutme" href="#aboutme" class="hover:text-sky-700 hover:cursor-pointer">About
+                        me</a>
+                    <a aria-label="link-education" href="#education"
+                        class="hover:text-sky-700 hover:cursor-pointer">Project</a>
+                    <a aria-label="link-works" href="#works" class="hover:text-sky-700 hover:cursor-pointer">Works</a>
+                    <a aria-label="link-expertise" href="#expertise"
+                        class="hover:text-sky-700 hover:cursor-pointer">Contact</a>
+                    <!-- <a aria-label="link-certified" href="#certified" class="hover:text-sky-700 hover:cursor-pointer">Certified</a> -->
+                    <!-- <a aria-label="link-activities" href="#activities" class="hover:text-sky-700 hover:cursor-pointer">Activities</a> -->
                 </div>
-            </el-disclosure>
-        </nav>
+            </div>
 
+            <hr class="mx-20">
+            <div class="h-32 flex flex-col justify-evenly items-center">
+                <div class="flex flex-row gap-3 mt-4">
+                    <a aria-label="my-facebook" href="https://instragram.com/Sugar3861" target="_blank"
+                        class="flex items-center justify-center text-slate-900 bg-gray-400 w-8 h-8 rounded-full hover:bg-sky-700 hover:border-white">
+                        <i class="fab fa-facebook-f fa-sm"></i>
+                    </a>
+                    <a aria-label="my-IG" href="https://instragram.com/Sugar3861" target="_blank"
+                        class="flex items-center justify-center text-slate-900 bg-gray-400 w-8 h-8 rounded-full hover:bg-sky-700 hover:border-white">
+                        <i class="fab fa-twitter fa-sm"></i>
+                    </a>
+                    <a aria-label="my-linkendin" href="https://instragram.com/Sugar3861" target="_blank"
+                        class="flex items-center justify-center text-slate-900 bg-gray-400 w-8 h-8 rounded-full hover:bg-sky-700 hover:border-white">
+                        <i class="fab fa-linkedin fa-sm"></i>
+                    </a>
+                    <a aria-label="my-github" href="https://github.com/SudJarb007" target="_blank"
+                        class="flex items-center justify-center text-slate-900 bg-gray-400 w-8 h-8 rounded-full hover:bg-sky-700 hover:border-white">
+                        <i class="fab fa-github fa-sm"></i>
+                    </a>
+                </div>
+                <p class="text-gray-400">Thank you for viewing my portfolio</p>
+            </div>
+
+            <div>
+    </footer>
     </h1>
 </body>
 
