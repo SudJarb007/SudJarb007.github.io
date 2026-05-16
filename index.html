@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style type="text/tailwindcss">
         @theme {
             --primary-color: #212A55;
@@ -23,9 +24,9 @@
       }
 
         @keyframes typing {
-            0%, 10% { width: 0; }        /* รอ 10% ก่อนเริ่มพิมพ์ */
-            40%, 60% { width: 100%; }    /* พิมพ์เสร็จแล้วค้างไว้ให้คนอ่านแป๊บนึง */
-            90%, 100% { width: 0; }      /* ถอยกลับไปที่ศูนย์ (หรือจะให้หายวับไปเลยก็ได้) */
+            0%, 10% { width: 0; }       
+            40%, 60% { width: 100%; }   
+            90%, 100% { width: 0; }      
         }
 
         @keyframes blink {
@@ -34,9 +35,6 @@
         }
 
         .animate-typing {
-        /* - 2s คือเวลาที่ใช้พิมพ์ (ปรับให้ช้าลงได้โดยเพิ่มตัวเลข)
-            - steps(8) คือจำนวนตัวอักษร "ABOUT ME" (รวมช่องว่างคือ 8 ตัว)
-        */
         display: inline-block;
         width: 0;
         overflow: hidden;
@@ -53,7 +51,7 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
 
     <nav class="nav_box 
-        top-0
+        fixed top-0 left-0 right-0 
         w-full
         flex justify-between
         p-6 z-50 font-bold
@@ -64,54 +62,58 @@
         <div id="nav-right" class="
             text-x-4 
             text-[#212A55]">
-            <a href="/">HOME</a> |
-            <a href="/pages/aboutme.html">ABOUT ME</a>
-            <a href="/pages/contract.html">MY PROJECT</a> |
-            <a href="/">CONTACT</a>
+            <a href="#home">HOME</a> |
+            <a href="#aboutme">ABOUT ME</a> |
+            <a href="#projects">MY PROJECT</a> |
+            <a href="#contact">CONTACT</a>
         </div>
     </nav>
 
-    <div class="contain_home
+    <div id="home" class="contain_home
         bg-[#EDEEF2]
         h-screen
         w-full
-        p-4">
+        p-4
+        pt-20">
         <div class="contain2_home 
             bg-[#FFFFFF]
             h-full
             w-full
-            flex flex-col items-center 
+            flex flex-row items-center 
             justify-center text-center 
+            gap-16 px-20 rounded-sm
             rounded-sm">
-            <div class="contain3_home_text mb-8">
+            <div class="contain3_home_text 
+                    text-left mb-8">
                 <h1 class="
                     text-5xl
-                    md:text-7xl
+                    md:text-5xl
                     font-bold
                     text-[#55BAB4] 
                     mb-2">
                     Hey! I'm</h1>
                 <h1 class="
-                    text-x
+                    text-2xl
                     md:text-7xl
                     font-bold
                     text-[#212A55]
                     mb-2">
                     Prapassorn Nouvapeth</h1>
-                <h3 class="
-                    text-3xl
+                <p class="
+                    text-2xl
                     font-medium
                     text-[#636A86]
-                    mt-4">A computer science student at kmitl</h3>
+                    mt-4">CS student at KMITL. I build things, they sometimes even work.</p>
             </div>
 
             <div class="contain4_home_pic
-            relative 
-            w-64 
-            h-80
-            md:w-80
-            md:h-[450px]">
-                <img class="picture" src="https://i.pinimg.com/1200x/c8/ae/18/c8ae18020dae9c666f780ae8179e0a5b.jpg"
+                    flex-shrink-0">
+                <img class="picture
+                        w-72 h-96 object-cover 
+                        rounded-2xl              
+                        border-4 border-[#55BAB4] 
+                        shadow-xl" 
+                    src="images/my_pic.jpg"
                     alt="none" />
             </div>
         </div>
@@ -119,7 +121,7 @@
 
 
 
-    <div class="contain_aboutme 
+    <div id="aboutme" class="contain_aboutme 
         flex h-screen w-full">
         
         <div class="
@@ -166,7 +168,8 @@
 
 
     <div class="contain_about2
-        flex h-screen w-full">
+            flex min-h-screen 
+            w-full">
         
         <div class="contain_education
             flex-1 
@@ -184,7 +187,7 @@
 
             <div class="text_edu_content
                     flex flex-col items-center justify-center
-                    gap-10">
+                    gap-8 w-full max-w-md">
                 
                 <div class = "edu_content1
                         flex flex-row items-center 
@@ -201,9 +204,9 @@
                     </div>
                     
                     <div class="edu_text">
-                        <p class="text-[#136F63] text-sm font-bold">2022 - Present</p>
-                        <h3 class="text-[#212A55] text-lg font-bold">42 Bangkok Institute</h3>
-                        <p class="text-[#212A55] text-sm">None Degree of Software Engineering</p>  
+                        <p class="text-[#136F63] text-sm font-bold">2024 - Present</p>
+                        <h3 class="text-[#212A55] text-lg font-bold">King Mongkut's Institute of Technology Ladkrabang</h3>
+                        <p class="text-[#212A55] text-sm">Bachelor of Science - Computer Science</p>  
                     </div>
                 </div>
 
@@ -221,9 +224,9 @@
                             border border-[#136F63]">
                     </div>
                     <div class="edu_text">
-                        <p class="text-[#136F63] text-sm font-bold">2022 - Present</p>
-                        <h3 class="text-[#212A55] text-lg font-bold">42 Bangkok Institute</h3>
-                        <p class="text-[#212A55] text-sm">None Degree of Software Engineering</p>  
+                        <p class="text-[#136F63] text-sm font-bold">2021 - 2023 </p>
+                        <h3 class="text-[#212A55] text-lg font-bold"> Triamudomsuksanomklao Nakhonratchasima School</h3>
+                        <p class="text-[#212A55] text-sm">High School Diploma - Science and Mathematics Program</p>  
                     </div>
                 </div>
 
@@ -241,9 +244,9 @@
                                 border border-[#136F63]">
                     </div>
                     <div class = "edu_text">
-                        <p class="text-[#136F63] text-sm font-bold">2022 - Present</p>
-                        <h3 class="text-[#212A55] text-lg font-bold">42 Bangkok Institute</h3>
-                        <p class="text-[#212A55] text-sm">None Degree of Software Engineering</p>
+                        <p class="text-[#136F63] text-sm font-bold">2019 - 2022</p>
+                        <h3 class="text-[#212A55] text-lg font-bold">Surathampitak School</h3>
+                        <p class="text-[#212A55] text-sm">Junior High School - Science,Math,English Program</p>
                     </div>
                 </div>
 
@@ -261,9 +264,9 @@
                                 border border-[#136F63]">
                     </div>
                     <div class = "edu_text">
-                        <p class="text-[#136F63] text-sm font-bold">2022 - Present</p>
-                        <h3 class="text-[#212A55] text-lg font-bold">42 Bangkok Institute</h3>
-                        <p class="text-[#212A55] text-sm">None Degree of Software Engineering</p>
+                        <p class="text-[#136F63] text-sm font-bold">2012 - 2018</p>
+                        <h3 class="text-[#212A55] text-lg font-bold">Sarasas Witaed Nakhonratchasima School</h3>
+                        <p class="text-[#212A55] text-sm">Elementary School - Grade 6 Graduate</p>
                     </div>
                 </div>
 
@@ -329,7 +332,7 @@
 
 
 
-    <div class="contain_project
+    <div id="projects" class="contain_project
             bg-[#FFFFFF]
             min-h-screen
             w-full
@@ -370,7 +373,7 @@
                         leading-relaxed 
                         font-bold 
                         mb-4">
-                        Data Pipeline Project
+                        To be continued... :D
                     </h3>
                     <div class="project_button 
                             flex items-center 
@@ -418,7 +421,7 @@
                         leading-relaxed 
                         font-bold 
                         mb-4">
-                        Data Pipeline Project
+                        To be continued... :D
                     </h3>
                     <div class="project_button 
                             flex items-center 
@@ -466,7 +469,7 @@
                         leading-relaxed 
                         font-bold 
                         mb-4">
-                        Data Pipeline Project
+                        To be continued... :D
                     </h3>
                     <div class="project_button 
                             flex items-center 
@@ -498,13 +501,15 @@
 
 
 
-    <div class="contain_project
+    <div class="contain_activities
             bg-[#F8FAFC]
-            h-screen
-            w-full">
+            min-h-screen
+            w-full
+            py-20 px-10">
 
             <div class="contain_text
                     flex items-center justify-center
+                    mb-20
                     h-1/4">
                 <h4 class="
                     text-[#212A55] 
@@ -520,14 +525,15 @@
             <div class="card_1
                     bg-[#B6BDC7] 
                     w-64 
-                    h-80 
+                    min-h-[22rem] 
                     m-10 
                     rounded-lg 
                     shadow-lg
-                    flex items-center justify-center flex-col">
+                    flex items-center justify-center flex-col
+                    overflow-hidden">
                 
                 <div class="card_image mb-4">
-                    <img src="images/demo_project.jpg" alt="Project1 Image"
+                    <img src="images/code_arcade.JPG" alt="Project1 Image"
                         class="
                             w-full 
                             h-40 
@@ -535,7 +541,7 @@
                             rounded-t-lg">
                 </div>
 
-                <div class="project_button mb-4">
+                <!-- <div class="project_button mb-4">
                     <button class="
                         bg-[#55BAB4] 
                         text-white 
@@ -546,29 +552,28 @@
                         transition-colors">
                         View Project
                     </button>
-                </div>
+                </div> -->
                 <p class="
                         text-[#212A55] 
                         text-lg 
                         font-medium 
                         text-center 
                         px-4">
-                    Data Pipeline Project: Developed a data pipeline to automate the collection, processing, and storage
-                    of large datasets for analysis.
-                </p>
+                    1st Runner-up – Computer Science Code Arcade 2025
             </div>
 
             <div class="card_2
                     bg-[#B6BDC7] 
                     w-64 
-                    h-80 
+                    min-h-[22rem] 
                     m-10 
                     rounded-lg 
                     shadow-lg 
-                    flex items-center justify-center flex-col">
+                    flex items-center justify-center flex-col
+                    overflow-hidden">
 
                 <div class="card_image mb-4">
-                    <img src="images/demo_project.jpg" alt="Project1 Image"
+                    <img src="images/hackathon.JPG" alt="Project1 Image"
                         class="
                             w-full 
                             h-40 
@@ -576,7 +581,7 @@
                             rounded-t-lg">
                 </div>
 
-                <div class="project_button mb-4">
+                <!-- <div class="project_button mb-4">
                     <button class="
                         bg-[#55BAB4] 
                         text-white 
@@ -587,29 +592,29 @@
                         transition-colors">
                         View Project
                     </button>
-                </div>
+                </div> -->
                 <p class="
                         text-[#212A55] 
                         text-lg 
                         font-medium 
                         text-center 
                         px-4">
-                    Data Pipeline Project: Developed a data pipeline to automate the collection, processing, and storage
-                    of large datasets for analysis.
+                    Top 10 Finalist<br>Science Faculty Hackathon 2024              
                 </p>
             </div>
 
             <div class="card_3
                     bg-[#B6BDC7] 
                     w-64 
-                    h-80 
+                    min-h-[22rem] 
                     m-10 
                     rounded-lg 
                     shadow-lg 
-                    flex items-center justify-center flex-col">
+                    flex items-center justify-center flex-col
+                    overflow-hidden">
 
                 <div class="card_image mb-4">
-                    <img src="images/demo_project.jpg" alt="Project1 Image"
+                    <img src="images/cer_SAP.jpg" alt="Project1 Image"
                         class="
                             w-full 
                             h-40 
@@ -617,7 +622,7 @@
                             rounded-t-lg">
                 </div>
 
-                <div class="project_button mb-4">
+                <!-- <div class="project_button mb-4">
                     <button class="
                         bg-[#55BAB4] 
                         text-white 
@@ -628,15 +633,16 @@
                         transition-colors">
                         View Project
                     </button>
-                </div>
+                </div> -->
                 <p class="
                         text-[#212A55] 
                         text-lg 
                         font-medium 
                         text-center 
                         px-4">
-                    Data Pipeline Project: Developed a data pipeline to automate the collection, processing, and storage
-                    of large datasets for analysis.
+                    Trained in SAP Analytics Cloud for data insights and SAP Build Apps 
+                    <!--for developing business-driven low-code applications.-->
+                </p>              
                 </p>
             </div>
         </div>
@@ -667,13 +673,14 @@
                 text-9xl 
                 font-bold 
                 m-10
+                animate-typing
                 ">CONTACT</h2>
         </div>
     </div>
 
 
 
-    <div class="contain_inbox
+    <div id="contact" class="contain_inbox
             bg-[#1C1B17]
             min-h-screen
             w-full
@@ -757,8 +764,8 @@
                     So if you need work done
                 </h2>
                 <button
-                    class="bg-[#F5C644] text-[#212A55] px-8 py-3 font-bold rounded-sm hover:bg-white transition-colors">
-                    Contact Me
+                    class=" bg-[#F5C644] text-[#212A55] px-8 py-3 font-bold rounded-sm hover:bg-white transition-colors">
+                    <a href="#contact">Contact Me</a>
                 </button>
             </div>
 
@@ -774,10 +781,10 @@
                 <div class="
                         flex flex-col 
                         mt-4 gap-2">
-                    <a aria-label="link-home" href="#" class=" text-[#212A55] hover:underline">HOME</a>
+                    <a aria-label="link-home" href="#home" class=" text-[#212A55] hover:underline">HOME</a>
                     <a aria-label="link-aboutme" href="#aboutme" class=" text-[#212A55] hover:underline">ABOUT ME</a>
-                    <a aria-label="link-education" href="#education" class=" text-[#212A55] hover:underline">MY PROJECT</a>
-                    <a aria-label="link-works" href="#works" class=" text-[#212A55] hover:underline">ACTIVITIES</a>
+                    <a aria-label="link-education" href="#projects" class=" text-[#212A55] hover:underline">MY PROJECT</a>
+                    <a aria-label="link-works" href="#activities" class=" text-[#212A55] hover:underline">ACTIVITIES</a>
                 </div>
             </div>
 
@@ -796,16 +803,16 @@
                 </p>
 
                 <div class="flex gap-4 mt-8">
-                    <a href="#" class="
+                    <a href="https://github.com/SUDJARB007" class="
                             w-10 h-10 
                             bg-[#212A55] 
                             rounded-full 
                             flex items-center justify-center 
                             text-white 
                             hover:bg-[#55BAB4] transition-all">
-                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-github"></i>
                     </a>
-                    <a href="#" class="
+                    <a href="https://www.linkedin.com/in/prapassorn-naovapech-95229540b/" class="
                             w-10 h-10 
                             bg-[#212A55] 
                             rounded-full 
@@ -815,7 +822,7 @@
                             transition-all">
                         <i class="fa-brands fa-linkedin-in"></i>
                     </a>
-                    <a href="#" class="
+                    <a href="https://www.facebook.com/share/1B4Touc2tF/?mibextid=wwXIfr" class="
                             w-10 h-10 
                             bg-[#212A55] 
                             rounded-full 
@@ -823,7 +830,7 @@
                             text-white 
                             hover:bg-[#55BAB4] 
                             transition-all">
-                        <i class="fa-brands fa-github"></i>
+                        <i class="fa-brands fa-facebook-f"></i>
                     </a>
                 </div>
             </div>
